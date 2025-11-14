@@ -26,6 +26,7 @@ import 'widgets/big_screen_manga_details.dart';
 import 'widgets/edit_manga_category_dialog.dart';
 import 'widgets/manga_chapter_organizer.dart';
 import 'widgets/small_screen_manga_details.dart';
+import '../manga_edit/manga_edit_screen.dart';
 
 class MangaDetailsScreen extends HookConsumerWidget {
   const MangaDetailsScreen({super.key, required this.mangaId, this.categoryId});
@@ -216,6 +217,19 @@ class MangaDetailsScreen extends HookConsumerWidget {
                               ),
                               child: Text(context.l10n.openInWeb),
                             ),
+                          PopupMenuItem(
+                            onTap: () async {
+                              final result = await Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (context) => MangaEditScreen(manga: data!),
+                                ),
+                              );
+                              if (result == true) {
+                                refresh();
+                              }
+                            },
+                            child: const Text('Edit'),
+                          ),
                         ],
                       )
                   ],

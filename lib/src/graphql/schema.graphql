@@ -2029,6 +2029,8 @@ input UpdateMangaInput {
 
 input UpdateMangaPatchInput {
   inLibrary: Boolean
+  title: String
+  genre: [String!]
 }
 
 type UpdateMangaPayload {
