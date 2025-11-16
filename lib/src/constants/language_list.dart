@@ -54,6 +54,7 @@ const customLanguageList = [
 
 const languageList = [
   {"code": 'en', "name": 'English', "nativeName": 'English'},
+  {"code": 'en-PIRATE', "name": 'Pirate Speak', "nativeName": 'Pirate Speak'},
   {"code": 'en-us', "name": 'English (US)', "nativeName": 'English (US)'},
   {"code": 'ca', "name": 'Catalan; Valencian', "nativeName": 'Català'},
   {"code": 'de', "name": 'German', "nativeName": 'Deutsch'},
